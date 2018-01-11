@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>台積電隔日股價走勢線上預測</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h2>台積電隔日股價走勢線上預測(From 2018/01/08)</h2>
+    <h3>請輸入今日日期(格式如:20171231)：</h3>
+    
+    {% from "_formhelpers.html" import render_field %}
+
+    <form method=post action="/results">
+        <dl>
+            {{ render_field(form.date, cols='30', rows='10') }}
+        </dl>
+        <div>
+            <input type=submit value='Submit' name='submit_btn'>
+            <input type=reset value='Reset' name='reset_btn'>
+        </div>
+    </form>
+
+</body>
+
+</html>

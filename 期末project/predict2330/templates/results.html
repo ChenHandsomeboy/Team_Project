@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>台積電隔日股價走勢線上預測</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h2>台積電隔日股價走勢線上預測</h2>
+    <hr>
+    <h3>當日輸入特徵：</h3>
+    <div>開盤價: <strong>{{ open }}</strong></div>
+    <br>
+    <div>最高價: <strong>{{ high }}</strong></div>
+    <br>
+    <div>最低價: <strong>{{ low }}</strong></div>
+    <br>
+    <div>收盤價: <strong>{{ close }}</strong></div>
+    <br>
+    <div>成交量: <strong>{{ volume }}</strong></div>
+    <br>
+    <div>融資餘額：<strong>{{ long }}</strong></div>
+    <br>
+    <div>融券餘額: <strong>{{ short }}</strong></div>
+    <br>
+    <div>法人買賣超(千元): <strong>{{ foreign }}</strong></div>
+    <br>
+    <div>投信買賣超(千元): <strong>{{ invest }}</strong></div>
+    <br>
+    <div>自營商買賣超(千元): <strong>{{ selff }}</strong></div>
+    <br>
+    <div>三大法人買賣超(千元): <strong>{{ total }}</strong></div>
+    <br>
+    <div>K值: <strong>{{ k }}</strong></div>
+    <br>
+    <div>D值: <strong>{{ d }}</strong></div>
+    <br>
+    <div>MACD值: <strong>{{ macd }}</strong></div>
+    <br>
+    <div>能量潮指標: <strong>{{ obv }}</strong></div>
+    <br>
+    <div>威廉指標: <strong>{{ willr }}</strong></div>
+    <br>
+    <div>ATR: <strong>{{ atr }}</strong></div>
+    <hr>
+    <h3>預測結果：</h3>
+    <div><font  size="+4"><strong>明日看漲機率為: </font><font color="#FF0000" size="+4">{{ value }}<strong></font></div>
+    <hr>
+    <div id='button'>
+        <form action="/">
+            <input type=submit value='Back'>
+        </form>
+    </div>
+
+</body>
+
+</html>
